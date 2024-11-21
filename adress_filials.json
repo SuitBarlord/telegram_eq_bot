@@ -1,0 +1,54 @@
+
+
+{
+        "Region_Chita":{
+            "data": "Region_Chita",
+            "name": "Чита",
+            "local":{
+                "mo1":{
+                    "id": 13001,
+                    "adress": "Чита, ул. Бутина, 72 (МО1)",
+                    "data": "Zapis'_v_Mezhrajonnyj_otdel_№1_KGAU_MFTs"
+                },
+                "mo2":{
+                    "id": 12801,
+                    "adress": "Чита, ул. Генерала Белика, 12 (МО2)",
+                    "data": "Zapis'_v_Mezhrajonnyj_otdel_№2_KGAU_MFTs"
+                },
+                "mo3":{
+                    "id": 12601,
+                    "adress": "Чита, ул. Ярославского, 40, пом. 4 (МО3)",
+                    "data": "Zapis'_v_Mezhrajonnyj_otdel_№3_KGAU_MFTs"
+                }
+            }
+        },
+        "Region_Chitinskiy":{
+            "data": "Region_Chitinskiy",
+            "name": "Читинский район",
+            "local": {
+                "Атамановка":{
+                    "id": 16201,
+                    "adress": "пгт. Атамановка, ул. Матюгина, 129а, стр. 1",
+                    "data": "Zapis'_v_TOSP_Atamanovka"
+                },
+                "Новокручининский":{
+                    "id": 16401,
+                    "adress": "пгт. Новокручининский, ул. Широкая, 8, пом. 2",
+                    "data": "Zapis'_v_TOSP_Novokruchininskij"
+                }
+            }
+        },
+        "Region_Zabaikalskiy": {
+            "data": "Region_Zabaikalskiy",
+            "name": "Забайкальский край",
+            "local": {
+                "Административная": {
+                    "id": 15601,
+                    "adress": "Краснокаменск, ул. Административная 5",
+                    "data": "Zapis'_v_MFTs_Krasnokamensk"
+                }
+            }
+        }
+}
+
+

@@ -1,0 +1,843 @@
+{
+    "isNewRecord": true,
+    "_links": {
+        "seanses": {
+            "href": null
+        },
+        "service": {
+            "href": null
+        },
+        "unit": {
+            "href": null
+        },
+        "talonStatus": {
+            "href": null
+        },
+        "talonType": {
+            "href": null
+        },
+        "currentWindowStatus": {
+            "href": null
+        },
+        "book": {
+            "href": null
+        },
+        "talonHistories": {
+            "href": null
+        },
+        "lifeSituation": {
+            "href": null
+        }
+    },
+    "seanses": [],
+    "service": {
+        "visitorFioPreRecord": true,
+        "complex": null,
+        "allowIvr": false,
+        "faceTypeRequired": true,
+        "gosuslugiReady": null,
+        "gosuslugiUrl": null,
+        "code": null,
+        "sync": true,
+        "workTime": null,
+        "rguServiceId": null,
+        "rguProcedureId": null,
+        "lifeSituation": false,
+        "deleted": false,
+        "stoppedInfo": null,
+        "timeService": 15,
+        "place": null,
+        "preRecordPercent": null,
+        "preRecordBegin": null,
+        "preRecordDays": null,
+        "maxCountService": null,
+        "returnPriority": 1,
+        "faceTypes": [
+            {
+                "id": 2,
+                "name": "Физическое лицо",
+                "code": "FIZ",
+                "extId": 8,
+                "deleted": false,
+                "prefix": null,
+                "priority": null
+            },
+            {
+                "id": 3,
+                "name": "Индивидуальный предприниматель",
+                "code": "IND",
+                "extId": 9,
+                "deleted": false,
+                "prefix": null,
+                "priority": null
+            },
+            {
+                "id": 1,
+                "name": "Юридическое лицо",
+                "code": "YUR",
+                "extId": 7,
+                "deleted": false,
+                "prefix": null,
+                "priority": null
+            }
+        ],
+        "childrenServices": [],
+        "qualityRating": true,
+        "information": null,
+        "visitorFio": true,
+        "allowPortal": true,
+        "childrenGroups": [],
+        "image": null,
+        "stopped": false,
+        "textVisitorFio": "Введите ФИО",
+        "withReturn": null,
+        "price": null,
+        "preRecordTodayPercent": null,
+        "textCountService": null,
+        "timeServiceStatistic": null,
+        "filter": false,
+        "active": true,
+        "prefix": "Ф",
+        "description": "ФПМП",
+        "group": false,
+        "name": "Фонды и корпорации помощи предпринимательства (Консультация)",
+        "priority": 1,
+        "id": 868801
+    },
+    "unit": {
+        "model": "units",
+        "attributes": {
+            "name": null,
+            "description": null,
+            "shortAddress": null,
+            "information": null,
+            "code": null,
+            "legalAddress": null,
+            "textScrolling": null,
+            "districtId": null,
+            "talonTemplate": null,
+            "terminalHeader": null,
+            "terminalFooter": null,
+            "displayHeader": null,
+            "tabloHeader": null,
+            "companyId": null,
+            "notifierCode": null,
+            "main": null,
+            "passphrase": null,
+            "sperId": null,
+            "mkguId": null,
+            "mkguOkato": null
+        },
+        "attributeLabels": {
+            "name": "Наименование",
+            "shortName": "Краткое наименование",
+            "description": "Краткое описание",
+            "information": "Полное описание",
+            "code": "Код",
+            "legalAddress": "Адрес",
+            "shortAddress": "Краткий адрес",
+            "legalAddressDescription": "Как добраться",
+            "textScrolling": "Текст для бегущей строки",
+            "districtId": "Район",
+            "talonTemplate": "Шаблон талона",
+            "terminalHeader": "Заголовок терминала",
+            "terminalFooter": "Подвал терминала",
+            "displayHeader": "Оформление информационного табло",
+            "tabloHeader": "Оформление заголовка табло",
+            "oktmoObject": "Объект ОКТМО",
+            "companyId": "Компания",
+            "notifierCode": "Идентификатор",
+            "main": "Головной офис",
+            "passphrase": "Кодовая фраза",
+            "server": "Сервер",
+            "phone": "Телефон",
+            "fax": "Факс",
+            "email": "Email",
+            "workingHours": "Часы работы",
+            "longitude": "Долгота",
+            "latitude": "Широта",
+            "workTime": "Режим рабочего времени",
+            "preRecordTime": "Режим рабочего времени на предварительную запись",
+            "sperId": "SPER_ID",
+            "mkguId": "Идентификатор организации в МКГУ",
+            "mkguOkato": "Идентификатор организации в  ОКАТО",
+            "externalId": "Внешний идентификатор подразделения",
+            "mdmFilialGuid": "Идентификатор организации МДМ"
+        },
+        "validators": {
+            "name": {
+                "isString": true,
+                "maxLength": 1024,
+                "isRequired": true
+            },
+            "shortName": {
+                "isString": true,
+                "maxLength": 255,
+                "isRequired": true
+            },
+            "description": {
+                "maxLength": 2048
+            },
+            "legalAddress": {
+                "isRequired": true
+            },
+            "legalAddressDescription": {
+                "isRequired": true
+            },
+            "phone": {
+                "isRequired": true,
+                "maxLength": 45,
+                "isString": true
+            },
+            "code": {
+                "maxLength": 128
+            },
+            "notifierCode": {
+                "maxLength": 255
+            },
+            "workingHours": {
+                "isRequired": true
+            },
+            "longitude": {
+                "isRequired": true,
+                "isNumber": true
+            },
+            "latitude": {
+                "isRequired": true,
+                "isNumber": true
+            },
+            "oktmoObject": {
+                "isRequired": true
+            },
+            "shortAddress": {
+                "isRequired": true
+            }
+        },
+        "relations": {
+            "oktmoObject": {
+                "class": "OktmoObjectsModel",
+                "field": "oktmoObject",
+                "type": "belongsTo"
+            },
+            "server": {
+                "class": "ServersModel",
+                "field": "server",
+                "type": "belongsTo"
+            },
+            "properties": {
+                "class": [
+                    "PropertyLinksUnitModel",
+                    "PropertiesModel"
+                ],
+                "field": [
+                    "propertyLinkUnits",
+                    "property",
+                    "unit"
+                ],
+                "type": "manyMany"
+            },
+            "linkProperties": {
+                "class": "PropertyLinksUnitModel",
+                "field": "propertyLinkUnits",
+                "type": "hasMany"
+            },
+            "workTimes": {
+                "class": "WorkTimesModel",
+                "field": "workTimes",
+                "type": "hasMany"
+            },
+            "departments": {
+                "class": "DepartmentsModel",
+                "field": "departments",
+                "type": "hasMany"
+            },
+            "templates": {
+                "class": "TemplatesModel",
+                "field": "templates",
+                "type": "hasMany"
+            },
+            "template": {
+                "class": "TemplatesModel",
+                "field": "talonTemplate",
+                "type": "hasOne"
+            },
+            "workTime": {
+                "class": "WorkTimesModel",
+                "field": "workTime",
+                "type": "belongsTo",
+                "url": "https://mfc-eq.loc/api/v1/units.json/16001/workTime"
+            },
+            "preRecordTime": {
+                "class": "WorkTimesModel",
+                "field": "preRecordTime",
+                "type": "belongsTo"
+            },
+            "halls": {
+                "class": "HallsModel",
+                "field": "halls",
+                "type": "hasMany"
+            },
+            "users": {
+                "class": "UsersModel",
+                "field": "users",
+                "type": "hasMany"
+            },
+            "parentUnit": {
+                "class": "UnitsModel",
+                "field": "parentUnit",
+                "type": "belongsTo"
+            },
+            "childrenUnits": {
+                "class": "UnitsModel",
+                "field": "childrenUnits",
+                "type": "hasMany"
+            },
+            "services": {
+                "class": "ServicesModel",
+                "field": "services",
+                "type": "hasMany"
+            },
+            "unionServices": {
+                "class": "UnionServicesModel",
+                "field": "unionServices",
+                "type": "hasMany"
+            }
+        },
+        "gridColumns": [
+            {
+                "field": "name",
+                "displayName": "Наименование",
+                "visible": false
+            },
+            {
+                "field": "shortName",
+                "cellTemplate": "<div class=\"ui-grid-cell-contents\"><div style=\"float:left;\" class=\"ui-grid-tree-base-row-header-buttons\" ng-class=\"{'ui-grid-tree-base-header': row.treeLevel > -1 }\"><i ng-class=\"{'ion-ios7-home': ( ( grid.options.showTreeExpandNoChildren && row.treeLevel > -1 ) || ( row.treeNode.children && row.treeNode.children.length > 0 ) ) && row.treeNode.state === 'expanded', 'ion-home': ( ( grid.options.showTreeExpandNoChildren && row.treeLevel > -1 ) || ( row.treeNode.children && row.treeNode.children.length > 0 ) ) && row.treeNode.state === 'collapsed', 'ion-ios7-home-outline': row.treeNode.children.length == 0}\" ng-style=\"{'padding-left': (grid.options.treeIndent * row.treeLevel + 8 * row.treeLevel) + 'px'}\"></i> &nbsp;</div><span ng-if='row.entity.childrenUnits.length > 0' ng-click=\"grid.appScope.onToggleRow(grid,row,evt)\">{{COL_FIELD CUSTOM_FILTERS}}</span><span ng-if='!row.entity.childrenUnits || row.entity.childrenUnits.length == 0' ng-click=\"grid.appScope.onClickRow(row, col, true)\">{{COL_FIELD CUSTOM_FILTERS}}</span></div>",
+                "displayName": "Краткое наименование",
+                "visible": true,
+                "otherAction": true,
+                "filters": [
+                    {
+                        "type": "group",
+                        "group": "elements",
+                        "checkField": "childrenUnits",
+                        "childField": "childrenUnits"
+                    }
+                ]
+            },
+            {
+                "field": "id",
+                "visible": true,
+                "enableFiltering": false,
+                "width": 80
+            },
+            {
+                "field": "description",
+                "displayName": "Краткое описание",
+                "visible": false
+            },
+            {
+                "field": "information",
+                "displayName": "Полное описание",
+                "visible": false
+            },
+            {
+                "field": "code",
+                "displayName": "Код",
+                "visible": false
+            },
+            {
+                "field": "legalAddress",
+                "displayName": "Адрес",
+                "visible": false
+            },
+            {
+                "field": "shortAddress",
+                "displayName": "Краткий адрес",
+                "visible": false
+            },
+            {
+                "field": "districtId",
+                "displayName": "Район",
+                "visible": false
+            },
+            {
+                "field": "server.name",
+                "displayName": "Сервер",
+                "visible": false
+            },
+            {
+                "name": " ",
+                "cellTemplate": "<a href=\"/arm/units/update/{{ row.entity.id }}\"><i class=\"ion-edit\"></i></a>",
+                "width": 60,
+                "cellClass": "text-center buttons-cell",
+                "headerCellClass": "buttons-cell-header",
+                "enableFiltering": false,
+                "enableColumnMenu": false,
+                "enableHiding": false,
+                "enableSorting": false,
+                "updateAction": {
+                    "name": "units-update",
+                    "field": "unitID"
+                }
+            },
+            {
+                "name": "  ",
+                "cellTemplate": "<div><a ng-click=\"grid.exporter.$scope.remove(row.entity)\" data-toggle=\"modal\" data-target=\"#delete-item\" ng-if=\"!row.entity.childrenUnits || row.entity.childrenUnits.length == 0\"><i class=\"ion-trash-b\"></i></a></div>",
+                "width": 60,
+                "cellClass": "text-center buttons-cell",
+                "headerCellClass": "buttons-cell-header",
+                "enableFiltering": false,
+                "enableColumnMenu": false,
+                "enableHiding": false,
+                "enableSorting": false,
+                "otherAction": true
+            }
+        ],
+        "isNewRecord": false,
+        "simpleRelationTypes": [
+            "belongsTo",
+            "hasOne"
+        ],
+        "manyRelationTypes": [
+            "hasMany"
+        ],
+        "validationRules": {},
+        
+        "workTime": {
+            "model": "workTimes",
+            "attributes": {
+                "description": null,
+                "mon": null,
+                "tue": null,
+                "wed": null,
+                "thu": null,
+                "fri": null,
+                "sat": null,
+                "sun": null,
+                "temp": null,
+                "prf": null,
+                "type": null
+            },
+            "attributeLabels": {
+                "unit": "Офис обслуживания",
+                "description": "Описание",
+                "mon": "Понедельник",
+                "tue": "Вторник",
+                "wed": "Среда",
+                "thu": "Четверг",
+                "fri": "Пятница",
+                "sat": "Суббота",
+                "sun": "Воскресенье",
+                "daysOfWeek": "Дни недели",
+                "workTimeRanges": "Временные интервалы",
+                "temp": "Временное расписание для окна",
+                "prf": "Корректирующее",
+                "type": "Тип рабочего времени",
+                "prfWorkTime": "Корректирующей режим рабочего времени"
+            },
+            "relations": {
+                "unit": {
+                    "class": "UnitsModel",
+                    "field": "unit",
+                    "type": "belongsTo"
+                },
+                "prfWorkTime": {
+                    "class": "WorkTimesModel",
+                    "field": "prfWorkTime",
+                    "type": "belongsTo"
+                },
+                "workTimeRanges": {
+                    "class": [
+                        "WorkTimeLinkWorkTimeRangesModel",
+                        "WorkTimeRangesModel"
+                    ],
+                    "field": [
+                        "workTimeLinkWorkTimeRanges",
+                        "workTimeRange",
+                        "workTime"
+                    ],
+                    "type": "manyMany",
+                    "url": "https://mfc-eq.loc/api/v1/workTimes.json/114201/workTimeLinkWorkTimeRanges"
+                },
+                "windows": {
+                    "class": "WindowsModel",
+                    "field": "windows",
+                    "type": "hasMany"
+                },
+                "users": {
+                    "class": "UsersModel",
+                    "field": "users",
+                    "type": "hasMany"
+                },
+                "services": {
+                    "class": "ServicesModel",
+                    "field": "services",
+                    "type": "hasMany"
+                }
+            },
+            "validators": {
+                "description": {
+                    "isRequired": true
+                }
+            },
+            "gridColumns": [
+                {
+                    "field": "id",
+                    "visible": true,
+                    "type": "number",
+                    "width": 80
+                },
+                {
+                    "field": "description",
+                    "displayName": "Описание",
+                    "visible": true
+                },
+                {
+                    "field": "type",
+                    "displayName": "Тип рабочего времени",
+                    "visible": true,
+                    "cellTemplate": "<div class=\"ui-grid-cell-contents text-center\"><span>{{row.entity.getWorkTimeTypeText(row.entity)}}</span></div>",
+                    "width": 150,
+                    "type": "number",
+                    "filters": [
+                        {
+                            "type": "select",
+                            "selectOptions": [
+                                {
+                                    "value": null,
+                                    "label": "Не задано"
+                                },
+                                {
+                                    "value": 0,
+                                    "label": "Обычное"
+                                },
+                                {
+                                    "value": 1,
+                                    "label": "Временное расписание для окна / оператора"
+                                },
+                                {
+                                    "value": 3,
+                                    "label": "Расписание для корректировки длительности услуги"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": " ",
+                    "cellTemplate": "<a href=\"/arm/work-times/update/{{ row.entity.id }}\"><i class=\"ion-edit\"></i></a>",
+                    "width": 60,
+                    "cellClass": "text-center buttons-cell",
+                    "headerCellClass": "buttons-cell-header",
+                    "enableFiltering": false,
+                    "enableColumnMenu": false,
+                    "enableHiding": false,
+                    "enableSorting": false,
+                    "updateAction": {
+                        "name": "work-times-update",
+                        "field": "workTimeID"
+                    }
+                },
+                {
+                    "name": "  ",
+                    "cellTemplate": "<div><a ng-click=\"grid.exporter.$scope.removeWorkTime(row.entity)\" data-toggle=\"modal\" data-target=\"#delete-item\"><i class=\"ion-trash-b\"></i></a></div>",
+                    "width": 60,
+                    "cellClass": "text-center buttons-cell",
+                    "headerCellClass": "buttons-cell-header",
+                    "enableFiltering": false,
+                    "enableColumnMenu": false,
+                    "enableHiding": false,
+                    "enableSorting": false,
+                    "otherAction": true
+                }
+            ],
+            "isNewRecord": false,
+            "simpleRelationTypes": [
+                "belongsTo",
+                "hasOne"
+            ],
+            "manyRelationTypes": [
+                "hasMany"
+            ],
+            "validationRules": {},
+            "url": "https://mfc-eq.loc/api/v1/workTimes.json/114201",
+            "id": 114201,
+            "description": "Предварительная запись в Тестовом филиале",
+            "mon": false,
+            "tue": false,
+            "wed": false,
+            "thu": false,
+            "fri": false,
+            "sat": false,
+            "sun": false,
+            "temp": false,
+            "prf": false,
+            "type": 0,
+            "monPreRecordFactor": 100,
+            "tuePreRecordFactor": 100,
+            "wedPreRecordFactor": 100,
+            "thuPreRecordFactor": 100,
+            "friPreRecordFactor": 100,
+            "satPreRecordFactor": 100,
+            "sunPreRecordFactor": 100,
+            "_links": {
+                "self": {
+                    "href": "https://mfc-eq.loc/api/v1/workTimes.json/114201"
+                },
+                "workTime": {
+                    "href": "https://mfc-eq.loc/api/v1/workTimes.json/114201{?projection}",
+                    "templated": true
+                },
+                "prfWorkTime": {
+                    "href": "https://mfc-eq.loc/api/v1/workTimes.json/114201/prfWorkTime"
+                },
+                "users": {
+                    "href": "https://mfc-eq.loc/api/v1/workTimes.json/114201/users"
+                },
+                "workTimeLinkWorkTimeRanges": {
+                    "href": "https://mfc-eq.loc/api/v1/workTimes.json/114201/workTimeLinkWorkTimeRanges"
+                },
+                "halls": {
+                    "href": "https://mfc-eq.loc/api/v1/workTimes.json/114201/halls"
+                },
+                "unit": {
+                    "href": "https://mfc-eq.loc/api/v1/workTimes.json/114201/unit"
+                },
+                "govAgencies": {
+                    "href": "https://mfc-eq.loc/api/v1/workTimes.json/114201/govAgencies"
+                },
+                "services": {
+                    "href": "https://mfc-eq.loc/api/v1/workTimes.json/114201/services"
+                },
+                "workTimes": {
+                    "href": "https://mfc-eq.loc/api/v1/workTimes.json/114201/workTimes"
+                },
+                "windows": {
+                    "href": "https://mfc-eq.loc/api/v1/workTimes.json/114201/windows"
+                },
+                "workTimeRanges": {
+                    "href": "https://mfc-eq.loc/api/v1/workTimes.json/114201/workTimeRanges"
+                }
+            },
+            "workTimeRanges": [
+                {
+                    "model": "workTimeRanges",
+                    "attributes": {
+                        "timeFrom": null,
+                        "timeTo": null,
+                        "description": null,
+                        "holiday": null,
+                        "mon": null,
+                        "tue": null,
+                        "wed": null,
+                        "thu": null,
+                        "fri": null,
+                        "sat": null,
+                        "sun": null,
+                        "day": null,
+                        "month": null,
+                        "year": null,
+                        "date": null,
+                        "preRecordFactor": null,
+                        "timeServicePreRecord": null,
+                        "comment": null,
+                        "preRecordAmountLimit": null
+                    },
+                    "attributeLabels": {
+                        "timeFrom": "Временной интервал с",
+                        "timeTo": "по",
+                        "description": "Описание",
+                        "holiday": "Выходной день",
+                        "mon": "Понедельник",
+                        "tue": "Вторник",
+                        "wed": "Среда",
+                        "thu": "Четверг",
+                        "fri": "Пятница",
+                        "sat": "Суббота",
+                        "sun": "Воскресенье",
+                        "day": "день",
+                        "month": "месяц",
+                        "year": "год",
+                        "date": "Дата окончания интервала",
+                        "parsedDate": "Дата",
+                        "daysDate": "Дни / Дата",
+                        "daysText": "Дни недели",
+                        "fullInfo": "Временной интервал",
+                        "preRecordFactor": "Процент окон по предварительной записи",
+                        "timeServicePreRecord": "Время обслуживания, мин",
+                        "prfWorkTime": "Корректирующий временной интервал",
+                        "comment": "Комментарий",
+                        "preRecordAmountLimit": "Ограничение кол-ва талонов для пред. записи",
+                        "preRecordWindowLimit": "Ограничение кол-ва окон для пред. записи"
+                    },
+                    "validators": {
+                        "timeFrom": {
+                            "isRequired": true
+                        },
+                        "timeTo": {
+                            "isRequired": true
+                        }
+                    },
+                    "relations": {
+                        "unit": {
+                            "class": "UnitsModel",
+                            "field": "unit",
+                            "type": "belongsTo"
+                        },
+                        "workTimes": {
+                            "class": "WorkTimesModel",
+                            "field": "workTimes",
+                            "type": "hasMany"
+                        }
+                    },
+                    "isNewRecord": false,
+                    "simpleRelationTypes": [
+                        "belongsTo",
+                        "hasOne"
+                    ],
+                    "manyRelationTypes": [
+                        "hasMany"
+                    ],
+                    "validationRules": {},
+                    "url": "https://mfc-eq.loc/api/v1/workTimeRanges.json/7401401",
+                    "id": 7401401,
+                    "timeFrom": "08:30:00",
+                    "timeTo": "18:00:00",
+                    "date": null,
+                    "description": null,
+                    "holiday": false,
+                    "mon": true,
+                    "tue": true,
+                    "wed": true,
+                    "thu": true,
+                    "fri": true,
+                    "sat": false,
+                    "sun": false,
+                    "day": null,
+                    "month": null,
+                    "year": null,
+                    "comment": null,
+                    "preRecordFactor": 100,
+                    "preRecordAmountLimit": null,
+                    "preRecordWindowLimit": null,
+                    "timeServicePreRecord": null,
+                    "isShortDay": null,
+                    "_links": {
+                        "self": {
+                            "href": "https://mfc-eq.loc/api/v1/workTimeRanges.json/7401401"
+                        },
+                        "workTimeRange": {
+                            "href": "https://mfc-eq.loc/api/v1/workTimeRanges.json/7401401{?projection}",
+                            "templated": true
+                        },
+                        "unit": {
+                            "href": "https://mfc-eq.loc/api/v1/workTimeRanges.json/7401401/unit"
+                        },
+                        "workTimeLinkWorkTimeRanges": {
+                            "href": "https://mfc-eq.loc/api/v1/workTimeRanges.json/7401401/workTimeLinkWorkTimeRanges"
+                        },
+                        "workTimes": {
+                            "href": "https://mfc-eq.loc/api/v1/workTimeRanges.json/7401401/workTimes"
+                        }
+                    },
+                    "parsedDate": "null-null-null",
+                    "daysDate": "Пн.Вт.Ср.Чт.Пт.",
+                    "fullInfo": "Пн.Вт.Ср.Чт.Пт. (08:30:00 - 18:00:00)",
+                    "link": {
+                        "model": "workTimeLinksWorkTimeRange",
+                        "relations": {
+                            "workTimeRange": {
+                                "class": "WorkTimeRangesModel",
+                                "field": "workTimeRange",
+                                "type": "belongsTo"
+                            },
+                            "workTime": {
+                                "class": "WorkTimesModel",
+                                "field": "workTime",
+                                "type": "belongsTo"
+                            }
+                        },
+                        "attributeLabels": {
+                            "workTime": "Рабочее время",
+                            "workTimeRange": "Временной интервал"
+                        },
+                        "isNewRecord": false,
+                        "attributes": null,
+                        "simpleRelationTypes": [
+                            "belongsTo",
+                            "hasOne"
+                        ],
+                        "manyRelationTypes": [
+                            "hasMany"
+                        ],
+                        "validationRules": {},
+                        "url": "https://mfc-eq.loc/api/v1/workTimeLinksWorkTimeRange.json/15128801",
+                        "id": 15128801,
+                        "_links": {
+                            "self": {
+                                "href": "https://mfc-eq.loc/api/v1/workTimeLinksWorkTimeRange.json/15128801"
+                            },
+                            "workTimeLinkWorkTimeRange": {
+                                "href": "https://mfc-eq.loc/api/v1/workTimeLinksWorkTimeRange.json/15128801{?projection}",
+                                "templated": true
+                            },
+                            "workTimeRange": {
+                                "href": "https://mfc-eq.loc/api/v1/workTimeLinksWorkTimeRange.json/15128801/workTimeRange"
+                            },
+                            "workTime": {
+                                "href": "https://mfc-eq.loc/api/v1/workTimeLinksWorkTimeRange.json/15128801/workTime"
+                            }
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    "status": {
+        "model": "talonStatuses",
+        "isNewRecord": false,
+        "attributes": null,
+        "relations": null,
+        "simpleRelationTypes": [
+            "belongsTo",
+            "hasOne"
+        ],
+        "manyRelationTypes": [
+            "hasMany"
+        ],
+        "attributeLabels": {},
+        "validationRules": {},
+        "url": "https://mfc-eq.loc/api/v1/talonStatuses.json/13",
+        "id": 13,
+        "name": "reserved",
+        "description": "Зарезервирован",
+        "_links": {
+            "self": {
+                "href": "https://mfc-eq.loc/api/v1/talonStatuses.json/13"
+            },
+            "talonStatus": {
+                "href": "https://mfc-eq.loc/api/v1/talonStatuses.json/13{?projection}",
+                "templated": true
+            },
+            "talons": {
+                "href": "https://mfc-eq.loc/api/v1/talonStatuses.json/13/talons"
+            }
+        }
+    },
+    "type": null,
+    "currentWindowStatus": null,
+    "book": null,
+    "histories": [],
+    "lifeSituation": null,
+    "countService": 1,
+    "priority": 25,
+    "source": 1,
+    "servDay": "2024-04-26",
+    "fio": "Тест Тест Тест",
+    "mobilePhone": "79145558888",
+    "bookFrom": "personal",
+    "reserveTime": "2024-04-26T09:00:00.000+0900",
+    "talonType": {
+        "name": "immediate"
+    }
+}
